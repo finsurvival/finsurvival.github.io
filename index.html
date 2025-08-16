@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FinSurvival Challenge - Advancing Deep Survival Modeling for Financial Transactions</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="container">
+            <div class="logo">FinSurvival Challenge</div>
+            <ul class="nav-links">
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="#task">Task</a></li>
+                <li><a href="#evaluation">Evaluation</a></li>
+                <li><a href="#timeline">Timeline</a></li>
+                <li><a href="#organizers">Organizers</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1 class="fade-in">FinSurvival Challenge</h1>
+            <p class="fade-in">Advancing Deep Survival Modeling for Financial Transactions</p>
+            <div class="cta-buttons fade-in">
+                <a href="https://icaif25.org" class="btn btn-primary" target="_blank">
+                    <i class="fas fa-external-link-alt"></i>
+                    ICAIF'25 Conference
+                </a>
+                <a href="#submission" class="btn btn-secondary">
+                    <i class="fas fa-upload"></i>
+                    Submit on Codabench
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Overview Section -->
+            <section id="overview" class="section">
+                <h2>Challenge Overview</h2>
+                <p>Survival modeling, the statistical prediction of time until a specific event occurs, holds immense value across the financial sector. Its applications are crucial for tasks such as estimating the time until <strong>loan repayment</strong> or <strong>default</strong>, and predicting <strong>portfolio churn</strong>, to provide critical insights for risk management, strategic planning, and customer retention.</p>
+                
+                <p>In the context of finance, <strong>survival analysis</strong> involves tracking a group of entities from an <strong>index event</strong> until a designated <strong>outcome event</strong>. For instance, the index event could be the origination of a loan, with the outcome event being its repayment or default. Similarly, for a customer portfolio, the index event might be a customer's onboarding, and the outcome event could be churn, i.e., when they cease using services.</p>
+
+            </section>
+
+            <!-- Task Description Section -->
+            <section id="task" class="section">
+                <h2>Task Description</h2>
+                <p>In the FinSurvival Challenge, the primary objective is <strong>time-to-event prediction</strong>. This means participants will build models to accurately predict how long it takes from an <strong>index event</strong> (e.g., a loan being issued) until a specific <strong>outcome event</strong> occurs (e.g., the loan is repaid or liquidated). The primary evaluation metric for this task is the <strong>Concordance Index (C-index)</strong>, where a score of 0.5 indicates random guessing and 1.0 represents perfect prediction.</p>
+
+                <p>We expect participants to develop models that can outperform existing benchmarks, particularly the FinSurvival benchmark, by leveraging advanced machine learning and deep learning techniques to capture the complex, non-linear relationships present in real-world DeFi transaction data.</p>
+
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number">7.6M+</div>
+                        <div class="stat-label">Records</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">128</div>
+                        <div class="stat-label">Engineered Features</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">16</div>
+                        <div class="stat-label">Prediction Tasks</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">C-index</div>
+                        <div class="stat-label">Evaluation Metric</div>
+                    </div>
+                </div>
+
+                <h3>Dataset</h3>
+                <p>The FinSurvival benchmark consists of 16 time-to-event prediction tasks based on user transactions on the Aave V2 Ethereum protocol. The released benchmark includes over <strong>7.6 million records</strong> and <strong>128 engineered features</strong>, capturing user behavior, market dynamics, and temporal patterns.</p>
+
+                <p>Each dataset record includes the following:</p>
+                <ul style="margin-left: 2rem; margin-bottom: 1.5rem;">
+                    <li><em>Index and outcome events:</em> Transaction types initiating and ending a survival interval (e.g., <code>borrow</code> → <code>repay</code>).</li>
+                    <li><em>Time-to-event information:</em> Duration in seconds and censoring indicator.</li>
+                    <li><em>128 features:</em> Including user-specific histories, market-level summaries, and engineered time representations (e.g., cyclic encodings of date/time).</li>
+                </ul>
+            </section>
+
+            <!-- Evaluation Section -->
+            <section id="evaluation" class="section">
+                <h2>Evaluation Protocol</h2>
+                <h3>Evaluation Criteria</h3>
+                <p>The competition is hosted on <strong>Codabench</strong>, supporting live scoring, submission formatting, and reproducibility.</p>
+
+                <p>The competition will include a leaderboard based on an <strong>extended dataset</strong> covering transactions from <strong>October 1, 2024, through September 15, 2025</strong>, and will also incorporate data from an additional, related but undisclosedDeFi protocol. To ensure a fair and robust evaluation, user aliases are concealed, preventing participants from reverse-engineering the dataset using public blockchain transactions.</p>
+
+                <div class="highlight-box">
+                    <h3>Competition Rules</h3>
+                    <ul style="margin-left: 1rem;">
+                        <li><strong>One account per participant/team:</strong> Participants may join the competition individually or as part of a team, but each participant must be affiliated with only one team.</li>
+                        <li><strong>Resource constraints:</strong> Methods designed for this competition must run in at most a V100 GPU with 16GB memory.</li>
+                        <li><strong>Honor code:</strong> We strongly encourage all participants to compete with integrity and avoid any dishonest practices.</li>
+                        <li><strong>Prize eligibility:</strong> To be eligible for prizes, each team must submit their code and a 2-page report by October 1, 2025.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Timeline Section -->
+            <section id="timeline" class="section">
+                <h2>Timeline</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="timeline-date">August 31, 2025</div>
+                            <h4>Data Release</h4>
+                        </div>
+                        <div class="timeline-dot"></div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="timeline-date">September 1, 2025</div>
+                            <h4>Leaderboard Launch</h4>
+                        </div>
+                        <div class="timeline-dot"></div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="timeline-date">October 1, 2025</div>
+                            <h4>Code, Documentation and Report Submission Deadline</h4>
+                        </div>
+                        <div class="timeline-dot"></div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="timeline-date">October 15, 2025</div>
+                            <h4>Winners Notified</h4>
+                        </div>
+                        <div class="timeline-dot"></div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="timeline-date">November 15-17, 2025</div>
+                            <h4>Presentation at ICAIF'25</h4>
+                        </div>
+                        <div class="timeline-dot"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Organizers Section -->
+            <section id="organizers" class="section">
+                <h2>Organizers</h2>
+                <p>The competition is organized by a multidisciplinary team, with extensive experience in AI for finance, survival modeling, and DeFi.</p>
+
+                <div class="organizers-grid">
+                    <div class="organizer-card">
+                        <div class="organizer-photo">
+                            <img src="images/Oshani.jpg" alt="Oshani Seneviratne">
+                        </div>
+                        <div class="organizer-name">Oshani Seneviratne</div>
+                        <div class="organizer-affiliation">Rensselaer Polytechnic Institute</div>
+                        <div class="organizer-title">Assistant Professor of Computer Science</div>
+                    </div> 
+
+                    <div class="organizer-card">
+                        <div class="organizer-photo">
+                            <img src="images/Aaron.jpeg" alt="Aaron Micah Green">
+                        </div>
+                        <div class="organizer-name">Aaron Micah Green</div>
+                        <div class="organizer-affiliation">Vassar College</div>
+                        <div class="organizer-title">Adjunct Professor of Mathematics and Statistics</div>
+                    </div>
+
+                    <div class="organizer-card">
+                        <div class="organizer-photo">
+                            <img src="images/Fernando.jpeg" alt="Fernando Spadea">
+                        </div>
+                        <div class="organizer-name">Fernando Spadea</div>
+                        <div class="organizer-affiliation">Rensselaer Polytechnic Institute</div>
+                        <div class="organizer-title">PhD Student in Computer Science</div>
+                    </div>
+
+                    <div class="organizer-card">
+                        <div class="organizer-photo">
+                            <img src="images/Kristin.jpeg" alt="Kristin P. Bennett">
+                        </div>
+                        <div class="organizer-name">Kristin P. Bennett</div>
+                        <div class="organizer-affiliation">Rensselaer Polytechnic Institute</div>
+                        <div class="organizer-title">Professor of Computer and Mathematical Sciences</div>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- Submission Section -->
+            <section id="submission" class="section">
+                <h2>Ready to Participate?</h2>
+                <div class="highlight-box" style="text-align: center;">
+                    <h3>Submit Your Solution</h3>
+                    <p class="highlight-box">Join the FinSurvival Challenge and compete with researchers and practitioners worldwide!</p>
+                    <a href="#" class="btn btn-primary" style="margin-top: 1rem;">
+                        <i class="fas fa-upload"></i>
+                        Submit on Codabench (Coming Soon)
+                    </a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <h3>FinSurvival Challenge</h3>
+                    <p>Advancing Deep Survival Modeling for Financial Transactions</p>
+                </div>
+                <ul class="footer-links">
+                    <li><a href="https://icaif25.org" target="_blank">ICAIF'25 Conference</a></li>
+                    <li><a href="mailto:senevo@rpi.edu">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add fade-in animation to elements when they come into view
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all sections
+        document.querySelectorAll('.section, .stat-card, .organizer-card').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
