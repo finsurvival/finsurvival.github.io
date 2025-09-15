@@ -22,6 +22,7 @@
                 <li><a href="#timeline">Timeline</a></li>
                 <li><a href="#prizes">Prizes</a></li>
                 <li><a href="rules.html">Rules</a></li>
+                <li><a href="#resources">Resources</a></li>
                 <li><a href="#organizers">Organizers</a></li>
             </ul>
         </nav>
@@ -236,6 +237,92 @@
                         <li>Meet all eligibility requirements outlined in the <a href="rules.html">Rules</a></li>
                     </ul>
                 </div>
+                </div>
+            </section>
+
+            <!-- Resources Section -->
+            <section id="resources" class="section resources-section">
+                <canvas id="resourcesCanvas" class="section-background"></canvas>
+                <div class="section-content">
+                    <h2>Resources</h2>
+                    
+                    <div class="resources-container">
+                        <div class="video-section">
+                            <h3>Video Tutorials</h3>
+                            <div class="video-grid">
+                                <div class="video-card">
+                                    <div class="video-embed">
+                                        <iframe src="https://www.youtube.com/embed/P93Pcbuex0w" 
+                                                title="Survival Modeling" 
+                                                frameborder="0" 
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                                allowfullscreen>
+                                        </iframe>
+                                    </div>
+                                    <div class="video-info">
+                                        <h4>Survival Modeling</h4>
+                                        <p>An introduction to survival modeling concepts and applications in finance.</p>
+                                    </div>
+                                </div>
+
+                                <div class="video-card">
+                                    <div class="video-embed">
+                                        <iframe src="https://www.youtube.com/embed/uBxTqWuH4DU" 
+                                                title="Formulating FinSurvival" 
+                                                frameborder="0" 
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                                allowfullscreen>
+                                        </iframe>
+                                    </div>
+                                    <div class="video-info">
+                                        <h4>Formulating FinSurvival</h4>
+                                        <p>Learn how the FinSurvival benchmark was formulated and designed.</p>
+                                    </div>
+                                </div>
+
+                                <div class="video-card">
+                                    <div class="video-embed">
+                                        <iframe src="https://youtube.com/embed/iePhals758U" 
+                                                title="Benchmarking FinSurvival" 
+                                                frameborder="0" 
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                                allowfullscreen>
+                                        </iframe>
+                                    </div>
+                                    <div class="video-info">
+                                        <h4>Benchmarking FinSurvival</h4>
+                                        <p>Understanding evaluation metrics and benchmarking approaches for survival modeling.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="paper-section">
+                            <h3>Research Paper</h3>
+                            <div class="paper-card">
+                                <div class="paper-header">
+                                    <h4>FinSurvival: A Suite of Large Scale Survival Modeling Tasks from Finance</h4>
+                                    <div class="paper-authors">
+                                        <span>Authors:</span> Aaron Green, Zihan Nie, Hanzhen Qin, Oshani Seneviratne, Kristin P. Bennett
+                                    </div>
+                                </div>
+                                <div class="paper-abstract">
+                                    <p>Survival modeling predicts the time until an event occurs and is widely used in risk analysis. We derive a suite of 16 survival modeling tasks from publicly available transaction data generated by lending of cryptocurrencies in Decentralized Finance (DeFi). With over 7.5 million records, FinSurvival provides a suite of realistic financial modeling tasks that will spur future AI survival modeling research.</p>
+                                </div>
+                                <div class="paper-links">
+                                    <a href="https://arxiv.org/abs/2507.14160" class="btn btn-primary" target="_blank">
+                                        <i class="fas fa-external-link-alt"></i>
+                                        Read Paper on arXiv
+                                    </a>
+                                    <button class="copy-citation-btn" onclick="copyCitation()">
+                                        <i class="fas fa-copy"></i>
+                                        Copy Citation
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
             </section>
 
@@ -853,6 +940,7 @@
             new FinSurvivalBackground('evaluationCanvas', 'evaluation');
             new FinSurvivalBackground('timelineCanvas', 'timeline');
             new FinSurvivalBackground('prizesCanvas', 'prizes');
+            new FinSurvivalBackground('resourcesCanvas', 'resources');
             new FinSurvivalBackground('organizersCanvas', 'organizers');
         });
 
@@ -915,6 +1003,26 @@
         document.querySelectorAll('.section').forEach(section => {
             sectionObserver.observe(section);
         });
+
+        // Copy citation function
+        function copyCitation() {
+            const citationText = "Green, Aaron, Zihan Nie, Hanzhen Qin, Oshani Seneviratne, and Kristin P. Bennett. \"FinSurvival: A Suite of Large Scale Survival Modeling Tasks from Finance.\" arXiv preprint arXiv:2507.14160 (2025).";
+            
+            navigator.clipboard.writeText(citationText).then(function() {
+                const button = document.querySelector('.copy-citation-btn');
+                const originalText = button.innerHTML;
+                button.innerHTML = '<i class="fas fa-check"></i> Copied!';
+                button.style.background = '#28a745';
+                
+                setTimeout(() => {
+                    button.innerHTML = originalText;
+                    button.style.background = '';
+                }, 2000);
+            }).catch(function(err) {
+                console.error('Could not copy text: ', err);
+                alert('Citation copied to clipboard!');
+            });
+        }
     </script>
 </body>
 </html>
