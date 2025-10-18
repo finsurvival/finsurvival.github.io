@@ -1008,7 +1008,7 @@ footer {
     margin-bottom: 1.5rem;
 }
 
-.prize-sponsor {
+.prize-supporter {
     margin-bottom: 1.5rem;
     padding: 1rem;
     background: rgba(255, 255, 255, 0.7);
@@ -1016,7 +1016,7 @@ footer {
     backdrop-filter: blur(10px);
 }
 
-.prize-sponsor span {
+.prize-supporter span {
     display: block;
     font-size: 0.9rem;
     color: #666;
@@ -1024,7 +1024,7 @@ footer {
     font-style: italic;
 }
 
-.sponsor-logo {
+.supporter-logo {
     max-height: 60px;
     max-width: 200px;
     object-fit: contain;
@@ -1032,7 +1032,7 @@ footer {
     transition: all 0.3s ease;
 }
 
-.sponsor-logo:hover {
+.supporter-logo:hover {
     filter: grayscale(0%);
     transform: scale(1.05);
 }
