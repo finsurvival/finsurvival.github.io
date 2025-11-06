@@ -468,6 +468,33 @@ nav {
 .winner-card.silver { border-left: 4px solid #C0C0C0; }
 .winner-card.bronze { border-left: 4px solid #CD7F32; }
 
+.winner-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    padding: 0.6rem 1rem;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    width: 100%;
+    justify-content: center;
+}
+
+.winner-link:hover {
+    background: linear-gradient(135deg, #5a6fd8, #6a3f8f);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.winner-link i {
+    font-size: 1.1rem;
+}
+
 @media (max-width: 768px) {
     .speaker-card {
         grid-template-columns: 1fr;
