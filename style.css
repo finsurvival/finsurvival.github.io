@@ -344,6 +344,40 @@ nav {
     pointer-events: none;
 }
 
+.workshop-info {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 2rem 3rem;
+    border-radius: 16px;
+    margin: 2rem 0 3rem 0;
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+    flex-wrap: wrap;
+}
+
+.workshop-date,
+.workshop-location {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.workshop-date i,
+.workshop-location i {
+    font-size: 1.8rem;
+    opacity: 0.9;
+}
+
+.workshop-date span,
+.workshop-location span {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
 .speaker-card {
     display: grid;
     grid-template-columns: 240px 1fr;
@@ -496,6 +530,24 @@ nav {
 }
 
 @media (max-width: 768px) {
+    .workshop-info {
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 1.5rem 2rem;
+        margin: 1.5rem 0 2rem 0;
+    }
+
+    .workshop-date,
+    .workshop-location {
+        font-size: 1.2rem;
+        justify-content: center;
+    }
+
+    .workshop-date i,
+    .workshop-location i {
+        font-size: 1.5rem;
+    }
+
     .speaker-card {
         grid-template-columns: 1fr;
     }
