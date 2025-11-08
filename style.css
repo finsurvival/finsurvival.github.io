@@ -540,6 +540,15 @@ nav {
     box-shadow: 0 4px 12px rgba(231, 76, 60, 0.3);
 }
 
+.winner-link-video {
+    background: linear-gradient(135deg, #00b4d8, #0077b6);
+}
+
+.winner-link-video:hover {
+    background: linear-gradient(135deg, #0096c7, #005a8e);
+    box-shadow: 0 4px 12px rgba(0, 148, 199, 0.3);
+}
+
 .winner-link i {
     font-size: 1.1rem;
 }
